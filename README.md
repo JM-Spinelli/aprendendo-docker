@@ -20,14 +20,17 @@ Antes de surgir o Docker, a tecnologia revolucionária no campo da Infraestrtura
 
 <p>&nbsp;O Docker surgiu em 2013 e junto a si trouxe a revolução que até hoje utilizamos. É uma plataforma se software de código aberto que permite construir, testar, executar e implementar em produção aplicações rodando em containers. Assim como as VMs tem o Hypervisor, os containers tem o Docker, que é o software que permite a criação dos containers.<br>
 &nbsp;A grande diferenças da VM para o Container, é que o Docker não virtualiza o hardware, mas sim o SO. Ou seja, o Docker pega uma pequena parte do Kernel do SO em que está hospedado e utiliza para criar um micro SO - micro porque invés de ter <b>Gb</b> (como as VMs), tem <b>Mb</b> - tendo uma estrutura significamente menor.<br><br>
-<b>O docker é elaborado da seguinte forma:</b><br>
-  <b> - Contêineres:</b>
+<b>O docker é elaborado da seguinte forma:</b><br><br>
+  <b> - Contêineres:</b><br>
 São unidades isoladas de software que incluem tudo o que a aplicação precisa para funcionar, como código, bibliotecas, ferramentas de sistema e tempo de execução.<br>
-<b>- Imagens Docker:</b>
+ 
+<b>- Imagens Docker:</b><br>
 São arquivos imutáveis que contêm as instruções para construir um contêiner.<br>
-<b>- Docker Engine:</b>
+
+<b>- Docker Engine:</b><br>
 O software que executa e gerencia os contêineres.<br>
-<b>- Docker Hub:</b>
+
+<b>- Docker Hub:</b><br>
 Um repositório público onde você pode encontrar e compartilhar imagens Docker.<br>
 
 </p>
