@@ -182,7 +182,7 @@ Após a criação do contêiner, para vê-lo em execução, usamos o comando ``d
 
 <b>7º - Exibição Mensagem</b><br>
 
-O propósito desse projeto é fazer com que assim que o contêiner seja criado, ele exiba a mensagem "Olá, Mundo!". Para vermos esse resultado, utilizamos o comando ``docker logs 'id contêiner'`
+O propósito desse projeto é fazer com que assim que o contêiner seja criado, ele exiba a mensagem "Olá, Mundo!". Para vermos esse resultado, utilizamos o comando ``docker logs 'id contêiner'``
 
 ![meu print](https://github.com/JM-Spinelli/Minhas-Imagens/blob/main/mensagem-gerada-cria%C3%A7%C3%A3o-conteiner.png)<br>
 </p>
