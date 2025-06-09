@@ -136,3 +136,12 @@ O Docker tem diversos comandos, então irei separá-los por categorias.<br><br>
  <h2 align="center">🎯Docker na Prática</h2>
 <!--<div align="center">--!>
 
+<p>
+A proposta aqui é rodar um contêiner simples, sendo o primeiro contato para quem nunca mexeu com Docker. Vou criar um Dockerfile (que será a base utilizada para gerar a minha imagem docker), criar a imagem docker e a partir dela criar um contêiner.</p> 
+
+<p>
+<b>1º - Criando Dockerfile</b><br>
+
+Estou utlizando uma máquina ubuntu Linux 22.04, no entanto, da rodar no Windows baixando o Docker Desktop. No projeto, criei o dockerfile a partir do comando ``touch Dockerfile``
+ 
+</p>
