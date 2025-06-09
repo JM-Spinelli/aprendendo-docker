@@ -137,11 +137,52 @@ O Docker tem diversos comandos, então irei separá-los por categorias.<br><br>
 <!--<div align="center">--!>
 
 <p>
-A proposta aqui é rodar um contêiner simples, sendo o primeiro contato para quem nunca mexeu com Docker. Vou criar um Dockerfile (que será a base utilizada para gerar a minha imagem docker), criar a imagem docker e a partir dela criar um contêiner.</p> 
+A proposta aqui é rodar um contêiner simples, sendo o primeiro contato para quem nunca mexeu com Docker. Vou criar um Dockerfile (que será a base utilizada para gerar a minha imagem docker), criar a imagem docker e a partir dela criar um contêiner com o propósito de que ele exiba a mensagem "Olá, Mundo!" assim que for criado.</p> 
 
 <p>
 <b>1º - Criando Dockerfile</b><br>
 
-Estou utlizando uma máquina ubuntu Linux 22.04, no entanto, da rodar no Windows baixando o Docker Desktop. No projeto, criei o dockerfile a partir do comando ``touch Dockerfile``
- 
+Estou utlizando uma máquina ubuntu Linux 22.04, no entanto, da para rodar no Windows baixando o Docker Desktop. No projeto, criei o dockerfile a partir do comando ``touch Dockerfile``
+
+![meu print](https://github.com/JM-Spinelli/Minhas-Imagens/raw/main/Criando-dockerfile.png)<br>
+
+<b>2º - Configurando Dockerfile</b><br>
+
+Uma vez que o Dockerfile está criado, editamo-os colocando as configurações que desejamos que a imagem docker tenha. No caso, estou gerando uma imagem baseada no linux ubuntu 22.04 (no docker está padronizado como 'ubuntu:22.04'. após os ':' vem a Tag, que nada mais é que a vesão do sistema operacional) e também já instalei as dependências desejadas, como o Git, o Docker e o Curl.<br><br>
+&nbsp; Um detalhe muito importate é o comando ``CMD``, cujo age como se você estivesse executando os comandos direto no terminal. Ou seja, quando o contêiner iniciar, ele vai executar o comandos configurados dentro dos colchetes do CMD. usei também o ``Tail -F`` para ficar incrementando output, pois caso contrário, o contèiner iniciaria e morreria por ausência de processo ativo dentro dele. 
+
+![meu print](https://github.com/JM-Spinelli/Minhas-Imagens/raw/main/comandos-arquivo-docker.png)<br>
+
+<b>3º - Gerando imagem docker</b><br>
+
+Com o Dockerfile já pronto, iniciamos então a contrução da imagem docker através do comando ``docker build -t 'nome-imagem' .`` O '.' chama o arquivo Dockerfile. Como o arquivo está na mesma pasta que a imagem será gerada, ele busca o arquivo ali mesmo (se fosse outra pasta, seria necessário colocar o caminho em que o arquivo Dockerfile está)
+
+![meu print](https://github.com/JM-Spinelli/Minhas-Imagens/raw/main/gerando-imagem.png)<br>
+
+
+<b>4º - Conferindo Geração Imagem</b><br>
+
+Após criação da imagem, para confirmar sua existência, usamos o comando ``docker images``
+
+![meu print](https://github.com/JM-Spinelli/Minhas-Imagens/raw/main/comando-docker-images.png)<br>
+
+<b>5º - Criando Contêiner Docker</b><br>
+
+Com a imagem build gerada, o próximo passo é a criação da contêiner em si. Para ciar o contêniner, usamos o comando ``docker run -d -t 'nome-imagem-criada'``<br><br>
+O <b>-d</b> (daemon) é utilizado para que o contêiner rode em segundo plano. É a utilização correta para quem quer usar um cotêiner para rodar uma aplicalção. 
+
+![meu print](https://github.com/JM-Spinelli/Minhas-Imagens/raw/main/criando-cont%C3%AAiner.png)<br>
+
+<b>6º - Conferindo Criação Contêiner</b><br>
+
+Após a criação do contêiner, para vê-lo em execução, usamos o comando ``docker ps``
+
+![meu print](https://github.com/JM-Spinelli/Minhas-Imagens/raw/main/docker-rodando.png)<br>
+
+
+<b>7º - Exibição Mensagem</b><br>
+
+O propósito desse projeto é fazer com que assim que o contêiner seja criado, ele exiba a mensagem "Olá, Mundo!". Para vermos esse resultado, utilizamos o comando ``docker logs 'id contêiner'`
+
+![meu print](https://github.com/JM-Spinelli/Minhas-Imagens/blob/main/mensagem-gerada-cria%C3%A7%C3%A3o-conteiner.png)<br>
 </p>
