@@ -1,4 +1,4 @@
-<h1 align="center">Docker na Prática</h1>
+<h1 align="center">📚Conhecendo Docker</h1>
 <!--<div align="center">--!>
 
 **`Docker`**<br><br>
@@ -82,47 +82,57 @@ O Docker tem diversos comandos, então irei separá-los por categorias.<br><br>
  - <b>docker load -</b> Carrega uma imagem a partir de um arquivo tar.<br>
  - <b>docker history -</b> Exibe o histórico de uma imagem<br>
  - <b>docker export -</b> Exporta o sistema de arquivos de um contêiner para um arquivo tar·<br>
- - <b>docker import -</b> Cria uma imagem a partir de um arquivo tar.<br>
+ - <b>docker import -</b> Cria uma imagem a partir de um arquivo tar.<br><br>
  
 
  <b>Comandos de Contêiners</b><br>
  
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
+- <b>docker run -</b> Comando utilizado para construir um contêiner a partir de uma imagem docker criada<br>
+- <b>docker exec -</b> Comando que permite você interagir com um contêiner em execução (semelhante a acessar um servidor via RDP ou Putty)<br>
+- <b>docker ps -</b> Lista contêineres em execução<br>
+- <b>docker stop -</b> Para um ou mais contêineres em execução<br>
+- <b>docker start -</b> Inicia um ou mais contêiners parados<br>
+- <b>docker restart -</b> Reinicia um ou mais contêiners<br>
+- <b>docker rm -</b> Remove um ou mais contêiners<br>
+- <b>docker logs -</b> Exibe os logs de um contêiner<br>
+- <b>docker top -</b> Exibe os processos em execução em um contêiner<br>
+- <b>docker stats -</b> Exibe estatísticas de recursos de contêiners em tempo real<br>
+- <b>docker wait -</b> Bloqueia até que um ou mais contêiners parem, então imprime seus códigos de saída<br><br>
 
 
- <b>Comando de Imagens</b><br>
+ <b>Comandos de Sistema</b><br>
  
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
-- <b> -</b> <br>
+- <b>docker system -</b> Gerencia o docker como um todo<br>
+- <b>docker info -</b> Exibe informações do sistema docker<br>
+- <b>docker version -</b> Exibe informações sobre a versão do docker (inclusive, muito útili para saber se os pacotes do docker estão instalados no server)<br>
+- <b>docker help -</b> Exibe ajuda sobre comandos docker<br><br>
 
-
-
-
-  <b>Comando de Imagens</b><br>
-
-  - <b> -</b> <br>
-  - <b> -</b> <br>
-  - <b> -</b> <br>
-  - <b> -</b> <br>
-  - <b> -</b> <br>
-  - <b> -</b> <br>
-  - <b> -</b> <br>
+ <b>Comandos de Rede</b><br>
+  
+- <b>docker network -</b> Gerencia redes docker<br>
+- <b>docker port -</b> Exibe as portas expostas de um contêiner<br>
+- <b>docker attach -</b> Anexa a entrada/saída padrão de um contêiner em execução<br><br>
   
 
+ <b>Comandos de Swarm</b><br>
 
-
-
-
+  - <b>docker swarm -</b> Gerencia o modo swarm do docker<br>
+  - <b>docker service -</b> Gerencia serviços no swarm<br>
+  - <b>docker stack -</b> Gerencia stacks no Swarm<br>
+  - <b>docker node -</b> Gerencia nós no Swarm<br>
+  - <b>docker secret -</b> Gerencia segredos no Swarm<br>
+  - <b>docker config -</b> Gerencia configurações no swarm<br><br>
   
+
+  <b>Comandos de Volume</b><br>
+
+  - <b>docker volume -</b> Gerencia volumes docker<br>
+  - <b>docker volume ls -</b> Lista volumes<br>
+  - <b>docker volume rm -</b> Remove volume<br><br>
+ 
  </p>
+
+
+ <h2 align="center">🎯Docker na Prática</h2>
+<!--<div align="center">--!>
+
